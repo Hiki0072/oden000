@@ -1,43 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ビューポート設定を追加 -->
-<title>性格診断</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>性格診断</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
     
 <body>
     <div class="container">
         
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="pyscript.html">PyScriptVer</a>
-        <a href="cluster_analysis.html">ClusterAnalysis</a>
-    </nav>
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pyscript.html">PyScriptVer</a>
+            <a href="cluster_analysis.html">ClusterAnalysis</a>
+        </nav>
 
-        <br>
-        <label for="colour-select">好きな寝相を選んでください：</label>
-        <select id="colour-select">
-            <option value="仰向け">仰向け</option>
-            <option value="うつ伏せ">うつ伏せ</option>
-            <option value="横向き">横向き</option>
-        </select>
-        <br>
-        <label for="number-input">好きな数字を選んでください（0、1、2）※半角数値で入力：</label>
-        <input type="number" id="number-input">
-        <br>
-        <button onclick="checkFortune()">性格をチェック</button>
-        <p id="result-output"></p>
+        <h1>性格診断</h1>
         
-    <nav>
-     <a href="index.html">Home</a>
-      <a href="pyscript.html">PyScriptVer</a>
-      <a href="cluster_analysis.html">ClusterAnalysis</a>
-    </nav>
+        <!-- Personality Test Form -->
+        <div class="form-section">
+            <label for="colour-select">好きな寝相を選んでください：</label>
+            <select id="colour-select">
+                <option value="仰向け">仰向け</option>
+                <option value="うつ伏せ">うつ伏せ</option>
+                <option value="横向き">横向き</option>
+            </select>
+            <br>
+
+            <label for="number-select">好きな数字を選んでください（0、1、2）：</label>
+            <select id="number-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <br>
+
+            <button onclick="checkFortune()">性格をチェック</button>
+            <p id="result-output"></p>
+        </div>
+
+        <!-- Footer Navigation Bar -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pyscript.html">PyScriptVer</a>
+            <a href="cluster_analysis.html">ClusterAnalysis</a>
+        </nav>
     </div>    
 
     <script src="app.js"></script>
-
 </body>
 </html>
+
